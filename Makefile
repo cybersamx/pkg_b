@@ -61,11 +61,11 @@ test: venv
 ##@ clean: Clean output files and build cache
 
 clean:
-	@echo "Removing build cache."
-	rm -rf __pycache__
-	rm -rf dist
-	rm -rf *.egg-info
-	find . -type f -name '*.pyc' -delete
+	@echo "Removing build cache and files."
+	@-rm -rf __pycache__
+	@-rm -rf dist
+	@-rm -rf *.egg-info
+	@-find . -type f -name '*.pyc' -delete
 
 ##@ help: Help
 
